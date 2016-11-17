@@ -73,16 +73,7 @@ app_patterns:
   # Php #
   #######
 
-  php_extensions:
-    # Symfony
-    - intl
-    - curl
-    - mbstring
-    - xml
-    # Composer
-    - zip
-    # App
-    - gd
+  php_extensions: "{{ (app_options.php_version|string == '7.0')|ternary(['intl', 'curl', 'gd', 'mbstring', 'zip', 'xml'], ['intl', 'curl', 'gd']) }}"
 
   php_configs:
     - file: app_opcache.ini
