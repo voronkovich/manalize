@@ -52,7 +52,7 @@ $ composer global require manala/manalize
 
 #### Using git:
 ```
-$ git clone https://github.com/manala/manalize
+$ git clone git@github.com:manala/manalize
 $ cd manalize
 $ composer install
 $ make build
